@@ -1,11 +1,12 @@
 "use client"
 
-import { CountryBlock } from "@/components/CountryBlock"
+import { Menu } from "@/components/Menu"
 import { CountryList } from "@/components/countryList"
 
 const Page = ()=> {
   return(
-    <main className="px-24 py-12">
+    <main className="">
+      
       <CountryList/>
     </main>
   )
