@@ -1,6 +1,7 @@
-import { motion } from "framer-motion"
-import { useRef } from "react";
+import { motion, useDragControls } from "framer-motion"
+import { useRef, useContext } from "react";
 import { useInView } from "framer-motion";
+import { DarkMode } from "@/contexts/DarkMode";
 
 type Props = {
     id: number
@@ -18,9 +19,9 @@ export const CountryBlock = ({ id, src, name, capital, region, oficialName, getC
     
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
-    
+    const darkModeCtx = useContext(DarkMode)
     return(
-        <div 
+        <motion.div 
             ref={ref} 
             key={id} 
             onClick={()=>getCountry(oficialName)} 
@@ -30,8 +31,8 @@ export const CountryBlock = ({ id, src, name, capital, region, oficialName, getC
             transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0s"
         }}
         >
-            <div className="max-w-96 relative h-[500px] flex flex-col border-2 rounded-lg overflow-hidden shadow-lg cursor-pointer lg:hover:scale-105 transition-all duration-300 ">
-                <img src={src} className={`w-full h-56 object-cover object-center`}/>
+            <div className={`max-w-96 relative h-[500px] flex flex-col rounded-lg overflow-hidden shadow-lg cursor-pointer lg:hover:scale-105 lg:hover:shadow-xl transition-all duration-300 ${darkModeCtx?.darkMode === true ? 'bg-sky-900 text-white' : 'bg-white text-black'}`}>
+                <img src={src} className={`w-full h-56 object-cover object-center bg-white`}/>
                 <div className="flex flex-col gap-4  mt-4 px-2">
                     <p>Oficial name: {oficialName}</p>
                     <p>popular name: {name}</p>
@@ -42,6 +43,6 @@ export const CountryBlock = ({ id, src, name, capital, region, oficialName, getC
                     <button onClick={()=> getCountry(oficialName)} className="w-full py-2 mt-4 rounded-md text-white font-semibold bg-emerald-500 hover:bg-emerald-400 transition-all duration-300">see more</button>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
