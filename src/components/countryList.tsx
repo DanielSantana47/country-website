@@ -26,8 +26,8 @@ const getAllCountries = async (url: string) => {
 }
 
 
-  const getCountry = (name: string) => {
-    getAllCountries(`https://restcountries.com/v3.1/name/${name}`)
+  const getCountry = (capital: string) => {
+    getAllCountries(`https://restcountries.com/v3.1/capital/${capital}`)
     setOpenModal(true);
   };
 
@@ -64,7 +64,7 @@ const getAllCountries = async (url: string) => {
               oficialName={country.name.official}
               region={country.region}
               src={country.flags.svg}
-              getCountry={() => getCountry(country.name.official)}
+              getCountry={() => getCountry(country.capital)}
             />
         ))}
         </div>
@@ -76,7 +76,7 @@ const getAllCountries = async (url: string) => {
         </div>
       }
 
-      {openModal === true && (
+      {openModal === true && countries.length === 1 && (
         <div className="h-auto w-auto">
           {countries.map((country, key) => (
             <CountryDetails
