@@ -64,7 +64,7 @@ const getAllCountries = async (url: string) => {
               oficialName={country.name.official}
               region={country.region}
               src={country.flags.svg}
-              getCountry={() => getCountry(country.name.common)}
+              getCountry={() => getCountry(country.name.official)}
             />
         ))}
         </div>
@@ -76,7 +76,7 @@ const getAllCountries = async (url: string) => {
         </div>
       }
 
-      {openModal === true && countries.length === 1 && (
+      {openModal === true && (
         <div className="h-auto w-auto">
           {countries.map((country, key) => (
             <CountryDetails
