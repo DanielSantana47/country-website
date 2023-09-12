@@ -9,7 +9,7 @@ const Page = ()=> {
   
   const darkModeCtx = useContext(DarkMode)
   return(
-    <main className={`${darkModeCtx?.darkMode === true ? 'bg-sky-950' : 'bg-white'} transition-all duration-300`}>
+    <main className={`${darkModeCtx?.darkMode === true ? 'bg-sky-950' : 'bg-white'} transition-all duration-300 min-h-screen`}>
       <CountryList/>
     </main>
   )
