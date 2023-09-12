@@ -51,7 +51,7 @@ const getAllCountries = async (url: string) => {
   
   return (
     <section className={`${openModal === false ? "py-24 px-2 md:px-4" : "px-4 py-4 overflow-x-hidden min-h-screen"} ${darkModeCtx?.darkMode === true ? 'bg-sky-950' : 'bg-white'}`}>
-      {openModal === false && <Menu searchCountry={()=> searchCountry(inputCtx?.input)}/>}
+      {openModal === false && <Menu searchCountry={()=> searchCountry(inputCtx?.input)}  backHome={handleCloseModal}/>}
 
       {openModal === false && countries.length > 0 && (
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
