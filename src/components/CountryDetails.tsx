@@ -8,7 +8,7 @@ type Props =  {
     flag: string,
     name: string,
     officialName: string,
-    capital: string,
+    capital: string[],
     continent: string[],
     subRegion: string,
     borders: string[],
