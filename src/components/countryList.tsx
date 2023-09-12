@@ -76,7 +76,7 @@ const getAllCountries = async (url: string) => {
         </div>
       }
 
-      {openModal === true  && (
+      {openModal === true  && countries.length === 1 && (
         <div className="h-auto w-auto">
           {countries.map((country, key) => (
             <CountryDetails
