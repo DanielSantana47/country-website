@@ -50,7 +50,7 @@ const getAllCountries = async (url: string) => {
   }, []);
   
   return (
-    <section className={`${openModal === false ? "py-24 px-2 md:px-4" : "px-4 py-4 overflow-x-hidden min-h-screen"} ${darkModeCtx?.darkMode === true ? 'bg-sky-950' : 'bg-white'}`}>
+    <section className={`${openModal === false ? "py-24 px-2 md:px-4" : "px-4 py-4 overflow-x-hidden min-h-screen"} ${darkModeCtx?.darkMode === true ? 'bg-sky-950' : 'bg-zinc-100'}`}>
       {openModal === false && <Menu searchCountry={()=> searchCountry(inputCtx?.input)}  backHome={handleCloseModal}/>}
 
       {openModal === false && countries.length > 0 && (
