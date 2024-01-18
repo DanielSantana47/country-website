@@ -31,7 +31,7 @@ export const CountryBlock = ({ id, src, name, capital, region, oficialName, getC
             transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0s"
         }}
         >
-            <div className={`max-w-96 relative h-[500px] flex flex-col rounded-lg overflow-hidden shadow-lg cursor-pointer lg:hover:scale-105 lg:hover:shadow-xl transition-all duration-300 ${darkModeCtx?.darkMode === true ? 'bg-sky-900 text-white' : 'bg-white text-black'}`}>
+            <div className={`max-w-96 relative h-[500px] flex flex-col rounded-lg overflow-hidden shadow-lg cursor-pointer lg:hover:scale-105 lg:hover:shadow-xl transition-all duration-300 ${darkModeCtx?.darkMode === true ? 'bg-sky-900 text-white' : 'bg-zinc-200 text-black'}`}>
                 <img src={src} className={`w-full h-56 object-cover object-center bg-white`}/>
                 <div className="flex flex-col gap-4  mt-4 px-2">
                     <p>Oficial name: {oficialName}</p>

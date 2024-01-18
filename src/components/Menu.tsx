@@ -22,7 +22,7 @@ export const Menu = ({ searchCountry, backHome }: Props)=> {
 
 
     return(
-        <nav className={`fixed top-0 left-0 right-0 py-4  shadow-lg z-50 transition-all  duration-300 ${darkModeCtx?.darkMode === true ? 'bg-sky-900 text-white': 'bg-white'}`}>
+        <nav className={`fixed top-0 left-0 right-0 py-4  shadow-lg z-50 transition-all  duration-300 ${darkModeCtx?.darkMode === true ? 'bg-sky-900 text-white': 'bg-zinc-100'}`}>
             <div className="container mx-auto flex justify-between items-center px-2 md:px-0">
                 <div onClick={backHome} className="cursor-pointer hover:scale-110 transition-all duration-300">
                     <SiAlienware className="text-4xl"/>

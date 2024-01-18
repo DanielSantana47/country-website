@@ -36,7 +36,7 @@ const darkModeCtx = useContext(DarkMode)
         className={`text-6xl md:text-7xl lg:text-8xl mb-3 md:mb-0 cursor-pointe hover:scale-110 lg:hover:-translate-y-2 hover:text-red-500 transition-all duration-300 ${darkModeCtx?.darkMode === true ? 'text-white' : 'text-emerald-500'}`}
         onClick={handleCloseModal}
         />
-      <div className={`shadow-xl rounded-lg overflow-hidden pb-12 lg:m-12 w-full lg:w-auto ${darkModeCtx?.darkMode === true ? 'bg-sky-900' : 'bg-white'}`}>
+      <div className={`shadow-xl rounded-lg overflow-hidden pb-12 lg:m-12 w-full lg:w-auto ${darkModeCtx?.darkMode === true ? 'bg-sky-900' : 'bg-zinc-200'}`}>
         <img
           src={flag}
           alt=""
